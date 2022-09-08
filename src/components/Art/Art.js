@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import Artcard from '../Artcard/Artcard';
+import "../Art/Arte.css"
 
 
 const url = "http://localhost:9292/arts"
@@ -34,8 +35,12 @@ let artCard = arts.map((art)=>
 // let mealCards = meals.map((meal) => (<MealCard mealName={meal.strMeal} mealThumbnail={meal.strMealThumb} mealId={meal.idMeal} key={meal.idMeal}/>))
   return (
 <>
+<div className='background'>
+<div className='art-card-Art'>
+{artCard}
+</div>
+</div>
 
- {artCard}
 </>
 
     
