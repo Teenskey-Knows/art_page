@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import "../Art/Art.css"
-import {useState,useEffect} from 'react-router-dom'
+
 
 
 function Art() {
