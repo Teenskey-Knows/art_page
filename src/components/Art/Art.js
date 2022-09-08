@@ -35,9 +35,11 @@ let artCard = arts.map((art)=>
 // let mealCards = meals.map((meal) => (<MealCard mealName={meal.strMeal} mealThumbnail={meal.strMealThumb} mealId={meal.idMeal} key={meal.idMeal}/>))
   return (
 <>
-<div className='background'>
+<div className='entire-background'>
+  <div className='art-background'>
 <div className='art-card-Art'>
 {artCard}
+</div>
 </div>
 </div>
 

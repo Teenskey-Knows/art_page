@@ -6,12 +6,20 @@
 }
 
 
-.background{
-    background-color: blue;
+.entire-background{
+    background-color: rgb(16, 16, 16);
+}
+
+.art-background{
+    background-color: black;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .art-card-Art{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2rem;
+     
     
 }

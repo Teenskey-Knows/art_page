@@ -17,3 +17,4 @@ function Artcard({ ArtImage, ArtName, ArtId, ArtDescription, ArtPrice }) {
 }
 
 export default Artcard;
+ 
