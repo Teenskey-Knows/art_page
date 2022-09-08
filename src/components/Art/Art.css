@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -6,6 +9,49 @@
 
 .body{
     background-color: rgb(30, 30, 30);
-    height: 50rem;
+    height: auto;
     width: 100%;
+ 
+}
+
+.second-body{
+    height: auto;
+    background-color: rgb(3, 3, 3);
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+    border-radius: 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.art-card{
+margin-left: 2rem;
+margin-top: 1rem;
+}
+
+.art-get-request-encloser{
+    background-color: rgb(29, 29, 29);
+    border-radius: 2rem;
+    width: 20rem;
+    padding: 0.8rem;
+   
+}
+
+.art-image{
+    height: 200px;
+    
+}
+
+h3{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+h2{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
 }

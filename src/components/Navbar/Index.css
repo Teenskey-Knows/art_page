@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -20,11 +23,15 @@
     flex-direction: row;
     color: rgb(235, 86, 6);
     margin-left: 20rem;
+    
 }
 
 .nav-routes-links{
     text-decoration: none;
     margin-left: 2rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding: 0.5rem;
 }
 
 
