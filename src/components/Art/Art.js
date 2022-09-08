@@ -1,67 +1,44 @@
 import React, {useState,useEffect} from 'react'
-import "../Art/Art.css"
+import Artcard from '../Artcard/Artcard';
 
 
+const url = "http://localhost:9292/arts"
 
 function Art() {
+
+
+  const [arts,setArts] =useState([])
+
+  const myArtFetcher = () => {
+    fetch(url)
+    .then((res)=>res.json())
+    .then((arts)=> 
+    setArts(arts)
+   )
+  };
+  
+
+useEffect(myArtFetcher,[])
+
+
+
+let artCard = arts.map((art)=>
+(
+
+  <Artcard key={art.id} ArtImage={art.art_image} ArtName={art.art_name} ArtId={art.id} ArtDescription={art.art_description} ArtPrice={art.art_price} />
+
+
+
+))
+
+// let mealCards = meals.map((meal) => (<MealCard mealName={meal.strMeal} mealThumbnail={meal.strMealThumb} mealId={meal.idMeal} key={meal.idMeal}/>))
   return (
-    <div className="body">
-      <br />
-        <div className='second-body'>
+<>
 
+ {artCard}
+</>
 
-          <div className='art-card'>
-            <img className="art-image" src="https://pbs.twimg.com/media/Fb_HW3QXkAI-JVv?format=jpg&name=360x360" alt="" />
-            <div className="art-get-request-encloser">
-            <h3>Artist Name: Martoh Incognitoh</h3>
-            <h3>Artist Id: 1</h3>
-            <h3>Art Description:</h3>
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio laborum nobis consequatur dolores quaerat architecto itaque fuga ratione officiis sunt.</h2>
-            </div>
-          </div>
-
-
-
-          <div className='art-card'>
-            <img className="art-image" src="https://pbs.twimg.com/media/Fb_HW3QXkAI-JVv?format=jpg&name=360x360" alt="" />
-            <div className="art-get-request-encloser">
-            <h3>Artist Name: Martoh Incognitoh</h3>
-            <h3>Artist Id: 1</h3>
-            <h3>Art Description:</h3>
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio laborum nobis consequatur dolores quaerat architecto itaque fuga ratione officiis sunt.</h2>
-            </div>
-          </div>
-
-
-          <div className='art-card'>
-            <img className="art-image" src="https://pbs.twimg.com/media/Fb_HW3QXkAI-JVv?format=jpg&name=360x360" alt="" />
-            <div className="art-get-request-encloser">
-            <h3>Artist Name: Martoh Incognitoh</h3>
-            <h3>Artist Id: 1</h3>
-            <h3>Art Description:</h3>
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio laborum nobis consequatur dolores quaerat architecto itaque fuga ratione officiis sunt.</h2>
-            </div>
-          </div>
-
-
-
-          <div className='art-card'>
-            <img className="art-image" src="https://pbs.twimg.com/media/Fb_HW3QXkAI-JVv?format=jpg&name=360x360" alt="" />
-            <div className="art-get-request-encloser">
-            <h3>Artist Name: Martoh Incognitoh</h3>
-            <h3>Artist Id: 1</h3>
-            <h3>Art Description:</h3>
-            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio laborum nobis consequatur dolores quaerat architecto itaque fuga ratione officiis sunt.</h2>
-            </div>
-          </div>
-
-          <div></div>
-          <div></div>
-
-
-        </div>
-
-    </div>
+    
   )
 }
 
