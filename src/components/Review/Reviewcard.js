@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Review/Review.css"
+import "../Review/Reviewcard.css"
 function Reviewcard({ReveiwUserId,ReviewArtId,ReviewComment,ReviewRating}) {
   return (
     <>

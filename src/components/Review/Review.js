@@ -26,10 +26,14 @@ function Review() {
     <div className='backgroundReview'>
 
     <div className='backgroundReviewCard'>
+
+      <div className='reviewContainer'>
     {reviewcard}
     </div>
+
+    </div>
     <div className='backgroundReviewForm'>
-      
+
     </div>
 
     </div>
