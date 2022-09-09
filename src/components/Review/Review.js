@@ -23,6 +23,12 @@ function Review() {
           <Reviewcard key={review.id} ReviewUserId={review.user_id} ReviewArtId={review.art_id} ReviewComment={review.comment} ReviewRating={review.rating} />
         ))
 
+        // Creating a function to update movies when the adding forms is triggered
+
+        function addingReviews(newReviews){
+          const updatedReviews = [...reviews,newReviews]
+          setReviews(updatedReviews)}
+
   return (
     <div className='backgroundReview'>
 
@@ -35,7 +41,7 @@ function Review() {
     </div>
     <div className='backgroundReviewForm'>
       {/* Where my form lives */}
-      <div className='reviewformbackground'> <Reviewform/></div>
+      <div className='reviewformbackground'> <Reviewform onAddingReviews={addingReviews}/></div>
 
     </div>
 
