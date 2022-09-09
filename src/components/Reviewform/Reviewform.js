@@ -1,15 +1,57 @@
 import React, {useState} from 'react'
 import "../Reviewform/Reviewform.css"
 
+
+const addingUrl = "http://localhost:9292/reviews"
+
 function Reviewform({onAddingReviews}) {
 
 const [formData,setFormData] = useState({
-    user_id : " ",
+    comment: " ",
+    rating: " ",
     art_id: " ",
-    art_rating: " ",
-    art_comment: " "
+    user_id : " ",
+ 
+   
+   
 }
 )
+
+function handleSubmit(event){
+    event.preventDefault();
+    fetch(addingUrl,{
+        method: "POST",
+        headers: {
+        "Content-Type":"application/json",
+    },
+    body: JSON.stringify(
+        {    comment: formData.comment,
+            rating: formData.rating,
+            art_id: formData.art_id,
+            user_id: formData.user_id,
+        }
+    ),
+
+    })
+    .then((res)=>res.json())
+    .then((newReviews)=>{
+        onAddingReviews(newReviews);
+        setFormData({
+            ...formData,
+            comment: " ",
+            rating: " ",
+            art_id: " ",
+            user_id : " ",
+         
+        });
+    });
+}
+
+
+function handleChange(event) {
+    const key = event.target.id;
+    setFormData({ ...formData, [key]: event.target.value });
+  }
 
 
 
@@ -19,22 +61,22 @@ const [formData,setFormData] = useState({
         <h2>Review Form</h2>
     </div>
     <div className='structureform'>
-    <form action="">
+    <form onSubmit={handleSubmit} action="">
         <label htmlFor="User Id">User Id</label>
         <br />
-        <input type="number"  id="user_id" value={formData.art_id}/>
+        <input onChange={handleChange} type="number"  id="user_id" value={formData.user_id}/>
         <br />
         <label htmlFor="Art Id">Art Id To Review</label>
         <br />
-        <input type="number" id="art_id" value={formData.art_id} />
+        <input onChange={handleChange}    type="number" id="art_id" value={formData.art_id} />
         <br />
         <label htmlFor="Rate Art">Rate Art</label>
         <br />
-        <input type="number" id="art_rating" value={formData.art_rating}/>
+        <input onChange={handleChange}  type="number" id="rating" value={formData.rating}/>
         <br />
         <label htmlFor="Comment">Comment</label>
         <br />
-        <textarea name="" id="art_comment" value={formData.art_comment} cols="30" rows="10"></textarea>
+        <textarea onChange={handleChange} name="" id="comment" value={formData.comment} cols="30" rows="10"></textarea>
         <br />
         <button type='submit'>Submit Review</button>
 
