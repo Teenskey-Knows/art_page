@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import Reviewcard from './Reviewcard'
-import { useState } from 'react'
+import "../Review/Review.css"
 
 const review_url = "http://localhost:9292/arts/reviews"
 
@@ -11,18 +11,22 @@ function Review() {
           fetch(review_url)
           .then((res)=>res.json())
           .then((reviews)=>setReviews(reviews))
-        }
+        };
 
         useEffect(myreviewfetcher,[])
+
+        
+      
         
         let reviewcard = reviews.map((review)=>(
-          <Reviewcard/>
+          <Reviewcard key={review.id} ReviewUserId={review.user_id} ReviewArtId={review.art_id} ReviewComment={review.comment} ReviewRating={review.rating} />
         ))
 
   return (
-    <div>
+    <div className='backgroundReview'>
     
-    
+    {reviewcard}
+   
     </div>
   )
 }

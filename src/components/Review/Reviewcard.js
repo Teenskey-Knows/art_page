@@ -1,10 +1,17 @@
 import React from 'react'
-
-function Reviewcard() {
+import "../Review/Review.css"
+function Reviewcard({ReveiwUserId,ReviewArtId,ReviewComment,ReviewRating}) {
   return (
-    <div>Reviewcard
-       
+    <>
+    <div>
+    <h1>User ID: {ReveiwUserId}</h1>
+    <p>{ReviewComment}</p>
+    <h1>Art ID Being Reviewed:{ReviewArtId}</h1>
+    <h1>Art Rating: {ReviewRating}</h1>
+   
     </div>
+
+    </>
   )
 }
 
