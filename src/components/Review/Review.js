@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import Reviewcard from './Reviewcard'
 import "../Review/Review.css"
+import Reviewform from '../Reviewform/Reviewform'
 
 const review_url = "http://localhost:9292/arts/reviews"
 
@@ -28,11 +29,13 @@ function Review() {
     <div className='backgroundReviewCard'>
 
       <div className='reviewContainer'>
-    {reviewcard}
+    { reviewcard}
     </div>
 
     </div>
     <div className='backgroundReviewForm'>
+      {/* Where my form lives */}
+      <div className='reviewformbackground'> <Reviewform/></div>
 
     </div>
 
