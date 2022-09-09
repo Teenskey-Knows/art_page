@@ -8,7 +8,6 @@ function Reviewcard({ReveiwUserId,ReviewArtId,ReviewComment,ReviewRating}) {
     <p>{ReviewComment}</p>
     <h1>Art ID Being Reviewed:{ReviewArtId}</h1>
     <h1>Art Rating: {ReviewRating}</h1>
-   
     </div>
 
     </>

@@ -5,7 +5,21 @@
 }
 
 .backgroundReview{
-    background-color: blue;
-    height: 50rem;
+    background-color: rgb(2, 2, 2);
+    height: auto;
     width: 100vw;
+    display: grid;
+    grid-template-columns:65% 35%;
+}
+
+.backgroundReviewCard{
+    background-color: rgb(44, 43, 43);
+    height: auto;
+    margin-left: 5rem;
+}
+
+.backgroundReviewForm{
+    background-color: aqua;
+    height: auto;
+    margin-right: 5rem;
 }

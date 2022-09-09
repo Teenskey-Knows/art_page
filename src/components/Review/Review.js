@@ -24,9 +24,14 @@ function Review() {
 
   return (
     <div className='backgroundReview'>
-    
+
+    <div className='backgroundReviewCard'>
     {reviewcard}
-   
+    </div>
+    <div className='backgroundReviewForm'>
+      
+    </div>
+
     </div>
   )
 }
