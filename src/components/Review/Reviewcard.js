@@ -1,6 +1,26 @@
 import React from 'react'
 import "../Review/Reviewcard.css"
-function Reviewcard({ReviewUserId,ReviewArtId,ReviewComment,ReviewRating}) {
+
+
+
+function Reviewcard({ReviewUserId,ReviewArtId,ReviewComment,ReviewRating,id,onDelete}) {
+
+
+  const deleteAReviews =`http://localhost:9292/reviews/delete/${id}`
+
+  function handleDelete(){
+    fetch(deleteAReviews,{
+      method: "DELETE"
+    })
+    onDelete(id)
+  }
+
+
+
+
+
+
+
   return (
     <>
     <div className='mappedReviews'>
@@ -13,6 +33,7 @@ function Reviewcard({ReviewUserId,ReviewArtId,ReviewComment,ReviewRating}) {
 
     <p style={{color:'white'}}className='comment'>Art Remarks: <br/> <br />{ReviewComment}</p>
     <br />
+    <button onClick={handleDelete}>Delete Review</button>
     </div>
 
     </>

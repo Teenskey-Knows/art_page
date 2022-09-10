@@ -16,11 +16,10 @@ function Review() {
 
         useEffect(myreviewfetcher,[])
 
-        
-      
+         
         
         let reviewcard = reviews.map((review)=>(
-          <Reviewcard key={review.id} ReviewUserId={review.user_id} ReviewArtId={review.art_id} ReviewComment={review.comment} ReviewRating={review.rating} />
+          <Reviewcard key={review.id} id={review.id} ReviewUserId={review.user_id} ReviewArtId={review.art_id} ReviewComment={review.comment} ReviewRating={review.rating} onDelete={deleteReview}/>
         ))
 
         // Creating a function to update movies when the adding forms is triggered
@@ -28,6 +27,15 @@ function Review() {
         function addingReviews(newReviews){
           const updatedReviews = [...reviews,newReviews]
           setReviews(updatedReviews)}
+
+            //Creating a Delete Functionality
+            function deleteReview(id){
+              const updatedReviews = reviews.filter((review)=>review.id !== id)
+              setReviews(updatedReviews)
+            }
+        
+
+       
 
   return (
     <div className='backgroundReview'>
@@ -41,7 +49,7 @@ function Review() {
     </div>
     <div className='backgroundReviewForm'>
       {/* Where my form lives */}
-      <div className='reviewformbackground'> <Reviewform onAddingReviews={addingReviews}/></div>
+      <div className='reviewformbackground'> <Reviewform onAddingReviews={addingReviews} /></div>
 
     </div>
 

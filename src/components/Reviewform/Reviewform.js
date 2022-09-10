@@ -4,7 +4,9 @@ import "../Reviewform/Reviewform.css"
 
 const addingUrl = "http://localhost:9292/reviews"
 
-function Reviewform({onAddingReviews}) {
+
+
+function Reviewform({onAddingReviews,onDelete}) {
 
 const [formData,setFormData] = useState({
     comment: " ",
