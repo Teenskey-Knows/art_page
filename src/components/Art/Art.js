@@ -36,7 +36,9 @@ let artCard = arts.map((art)=>
   return (
 <>
 <div className='entire-background'>
+  <br />
   <div className='art-background'>
+    {/* <br /> */}
 <div className='art-card-Art'>
 {artCard}
 </div>

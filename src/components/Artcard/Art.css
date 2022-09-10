@@ -8,15 +8,20 @@
 }
 
 .art-get-request-encloser{
-    background-color: rgb(200, 15, 15);
+    background-color: rgb(36, 35, 35);
     border-radius: 2rem;
     width: 20rem;
     padding: 0.8rem;
+    margin-bottom: 2rem;
    
 }
 
 .art-image{
-    height: 200px;
+    width: 300px;
+    border-radius: 2rem;
+    border: solid black;
+    padding: 0.8rem;
+
     
 }
 

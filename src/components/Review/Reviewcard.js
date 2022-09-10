@@ -34,6 +34,7 @@ function Reviewcard({ReviewUserId,ReviewArtId,ReviewComment,ReviewRating,id,onDe
     <p style={{color:'white'}}className='comment'>Art Remarks: <br/> <br />{ReviewComment}</p>
     <br />
     <button onClick={handleDelete}>Delete Review</button>
+    <button className="editReviewBtn" onClick={handleDelete}>Edit Review</button>
     </div>
 
     </>

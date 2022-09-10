@@ -7,7 +7,7 @@
 .backgroundReview{
     background-color: rgb(57, 56, 56);
     height: auto;
-    width: 100vw;
+    
     display: grid;
     grid-template-columns:55% 40%;
 }

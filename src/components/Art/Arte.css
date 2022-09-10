@@ -7,19 +7,26 @@
 
 
 .entire-background{
-    background-color: rgb(16, 16, 16);
+    background-color: rgb(35, 35, 35);
 }
 
 .art-background{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-left: 3rem;
     margin-right: 3rem;
+    margin-top: 3rem;
+    border-radius: 4rem;
 }
 
 .art-card-Art{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5rem;
     margin-left: 2rem;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    
      
     
 }
