@@ -42,6 +42,7 @@ let artCard = arts.map((art)=>
 <div className='art-card-Art'>
 {artCard}
 </div>
+
 </div>
 </div>
 
