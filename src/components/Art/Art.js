@@ -3,7 +3,7 @@ import Artcard from '../Artcard/Artcard';
 import "../Art/Arte.css"
 
 
-const url = "http://localhost:9292/arts"
+const url = "https://myartpage.herokuapp.com/arts"
 
 function Art() {
 

@@ -3,7 +3,7 @@ import Reviewcard from './Reviewcard'
 import "../Review/Review.css"
 import Reviewform from '../Reviewform/Reviewform'
 
-const review_url = "http://localhost:9292/arts/reviews"
+const review_url = "https://myartpage.herokuapp.com/arts/reviews"
 
 function Review() {
 
@@ -27,6 +27,12 @@ function Review() {
         function addingReviews(newReviews){
           const updatedReviews = [...reviews,newReviews]
           setReviews(updatedReviews)}
+
+          // function addingPets(newPets){
+          //   const updatedPets= [...pets,newPets]
+          //   setPets(updatedPets)
+          // }
+
 
             //Creating a Delete Functionality
             function deleteReview(id){

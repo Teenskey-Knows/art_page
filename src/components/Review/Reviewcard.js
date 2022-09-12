@@ -6,7 +6,7 @@ import "../Review/Reviewcard.css"
 function Reviewcard({ReviewUserId,ReviewArtId,ReviewComment,ReviewRating,id,onDelete}) {
 
 
-  const deleteAReviews =`http://localhost:9292/reviews/delete/${id}`
+  const deleteAReviews =`https://myartpage.herokuapp.com/reviews/delete/${id}`
 
   function handleDelete(){
     fetch(deleteAReviews,{

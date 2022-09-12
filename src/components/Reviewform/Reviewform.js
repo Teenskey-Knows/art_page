@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import "../Reviewform/Reviewform.css"
 
 
-const addingUrl = "http://localhost:9292/reviews"
+const addingUrl = "https://myartpage.herokuapp.com/reviews"
 
 
 
